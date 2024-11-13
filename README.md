@@ -1,5 +1,5 @@
 # xiwu0654_9103_tut5
-My first respository for IDEA9103
+My first repository for IDEA9103
 
 This is my first local change to the repo
 
@@ -7,39 +7,44 @@ This is my first local change to the repo
 
 ## Part 1: Imaging Technique Inspiration
 
-### Inspiration: Flowing Starry Sky
-For my assignment, I found inspiration in an artwork that depicts stars flowing along a curved trajectory, creating a dynamic and dreamlike effect. I aim to incorporate a similar flowing, starry visual by placing stars on a bezier curve, creating a smooth, continuous movement. This technique brings an ethereal quality to the design, enhancing the viewer's sense of immersion. It’s particularly beneficial for this project, as it adds both visual appeal and a sense of depth through movement.
+### Inspiration
+For our group assignment, I found inspiration in three distinct images:
 
-![Inspiration Image 1](image/Screenshot%202024-08-27%20at%2010.04.07%20pm.png)
+1. **Microscopic View of Cells**  
+   The first image, showing cells under a microscope, inspired me to give an oval shape in our group’s image a "breathing" effect. This effect mirrors the microscopic world, setting the theme for my animation and giving a subtle sense of organic life to the visuals.
+
+   ![Microscope Cells Image](image/IMG_1010.jpg)
+
+2. **Neon Light Artwork**  
+   The second image is an artwork of neon lights, whose colors resemble our assignment’s palette. I aim to use Perlin noise and brightness modulation to create a flickering effect, mimicking the subtle shifts in neon light intensity, which aligns with our color scheme.
+
+   ![Neon Light Image](image/IMG_1009.jpg)
+
+3. **Microscopic Texture**  
+   The third image captures the textured quality of microscopic views, which I plan to recreate as an animated background. Using 2D Perlin noise, I’ll aim to simulate this fine-grain texture, adding depth and a tactile quality to the background of our project.
+
+   ![Microscopic Texture Image](image/IMG_1011.jpg)
 
 ---
 
 ## Part 2: Coding Technique Exploration
 
-### Technique: Bezier Curve Animation in p5.js
-I discovered a bezier curve animation technique in p5.js that helps create flowing lines with smooth, rainbow-like color transitions. Using this code, I plan to position stars along the curve and animate them to move continuously. This bezier curve technique will act as a path for the stars, making them appear as if they’re gliding along a cosmic trail. Below is the code example I found, which can be adapted to achieve the flowing star effect.
+### Techniques
+To achieve these effects, I’ll employ the following coding techniques:
 
+1. **Breathing Effect with Sinusoidal Animation**  
+   By applying Perlin noise and scaling it to shapes, I’ll create a subtle "breathing" animation. This technique allows the shapes to rhythmically expand and contract, simulating an organic movement that mirrors the textures and dynamics of the microscopic world.
 
-**Code Example and Reference:** [Bezier Curve Animation in p5.js](https://p5js.org/examples/repetition-bezier/)
+2. **Flickering Neon Effect with Perlin Noise**  
+   For the flickering neon effect, I plan to use Perlin noise combined with brightness modulation, creating a natural, randomized flicker that enhances the color palette of our project.
 
-```javascript
-// Define strokeHue as a global variable. This variable will be used to color each line.
-let strokeHue = 20;
+3. **Textured Background with 2D Perlin Noise**  
+   Finally, I’ll implement 2D Perlin noise to generate a texture reminiscent of microscopic detail, using it as an animated background to add depth to the composition.
 
-function setup() {
-  createCanvas(720, 400);
-  noFill();
-  strokeWeight(2);
-  colorMode(HSB);
-}
+Each technique will contribute to a cohesive visual theme inspired by microscopic imagery and organic textures.
 
-function draw() {
-  background(5);
+**References:**
+- [Perlin Noise in two dimensions](https://www.youtube.com/watch?v=ikwNrFvnL3g&list=PLRqwX-V7Uu6bgPNQAdxQZpJuJCjeOr7VD&index=4)
+- [Perlin Noise](https://p5js.org/examples/repetition-noise/)
 
-  // Create 10 bezier lines with anchor points moving with the X coordinate of the cursor.
-  for (let i = 0; i < 200; i += 20) {
-    let strokeColor = i + 10;
-    stroke(strokeColor, 50, 60);
-    bezier(mouseX - i / 2, 0 + i, 410, 20, 440, 300, 240 - i / 16, 300 + i / 8);
-  }
-}
+---
