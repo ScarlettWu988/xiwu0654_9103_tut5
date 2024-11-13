@@ -43,7 +43,7 @@ To achieve these effects, I’ll employ the following coding techniques:
 
 Each technique will contribute to a cohesive visual theme inspired by microscopic imagery and organic textures.
 
-**References:**
+**Code link/Tutorial**
 - [Perlin Noise in two dimensions](https://www.youtube.com/watch?v=ikwNrFvnL3g&list=PLRqwX-V7Uu6bgPNQAdxQZpJuJCjeOr7VD&index=4)
 - [Perlin Noise](https://p5js.org/examples/repetition-noise/)
 
